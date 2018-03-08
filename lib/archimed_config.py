@@ -34,7 +34,7 @@ class ArchimedConfig():
         creds = {key: value.strip() for (key, value) in match}
 
         # standard Archimed defaults...
-        default_port = 9102 if (network == 'mainnet') else 19998
+        default_port = 10211 if (network == 'mainnet') else 20211
 
         # use default port for network if not specified in archimed.conf
         if not ('port' in creds):

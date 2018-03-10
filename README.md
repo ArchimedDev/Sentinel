@@ -28,7 +28,7 @@ Make sure the local Archimed daemon running is at least version 1.0 (100000)
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/ArchimedCoin/Sentiel.git && cd sentinelLinux
+    $ git clone https://github.com/ArchimedCoin/Sentiel.git && cd Sentinel
     $ export LC_ALL=C
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
@@ -96,7 +96,7 @@ Set up a crontab entry to call Sentinel every minute:
 
 In the crontab editor, add the lines below, replacing '/home/YOURUSERNAME/sentinel' to the path where you cloned sentinel to:
 
-    * * * * * cd /home/YOURUSERNAME/sentinelLinux && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
+    * * * * * cd /home/YOURUSERNAME/Sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
 
 ### 4. Test the Configuration
 
@@ -116,15 +116,12 @@ An alternative (non-default) path to the `archimed.conf` file can be specified i
 
 To view debug output, set the `SENTINEL_DEBUG` environment variable to anything non-zero, then run the script manually:
 
-    $ cd ~/sentinelLinux && SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py
+    $ cd ~/Sentinel && SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py
 
 ## Contributing
 
-Please follow the [ArchimedCore guidelines for contributing](https://github.com/archimedpay/archimed/blob/v0.12.1.x/CONTRIBUTING.md).
-
 Specifically:
 
-* [Contributor Workflow](https://github.com/archimedpay/archimed/blob/v1.0.0/CONTRIBUTING.md#contributor-workflow)
 
     To contribute a patch, the workflow is as follows:
 
